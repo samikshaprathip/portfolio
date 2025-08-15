@@ -14,16 +14,16 @@
     <header class="header">
         <a href="#" class="logo">Portfolio</a>
         <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Skill</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Skill</a>
+            <a href="#portfolio">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <!-- HOME SECTION -->
-    <section class="home">
+    <section class="home" id="home">
         <div class="home-content">
             <h3>Hello, It's Me</h3>
             <h1>Samiksha Prathip</h1>
@@ -40,13 +40,13 @@ Ultimately, my goal is to grow into a skilled developer who contributes to innov
             </p>
 
             <div class="home-sci">
-                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-github'></i></a>
-                <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.instagram.com/samikshaprathip/"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://www.linkedin.com/in/samiksha-prathip-344685326/"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/samikshaprathip"><i class='bx bxl-github'></i></a>
+                <a href="https://wa.me/919488257477"><i class='bx bxl-whatsapp'></i></a>
             </div>
 
-            <a href="#" class="btn-box">More About Me</a>
+            <a href="#about" class="btn-box">More About Me</a>
         </div>
 
         <div class="home-img">
@@ -222,30 +222,8 @@ Features a clean, intuitive UI for quick item addition, organization, and tracki
         </form>
     </div>
 </section>
-
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  (function(){
-    emailjs.init("yGDjhZQ_xtfCycVqT"); // Replace with your Public Key
-  })();
-
-  document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    emailjs.sendForm("service_123abc", "template_456def", this)
-      .then(function() {
-        alert("✅ Message sent successfully!");
-        document.getElementById("contact-form").reset();
-      }, function(error) {
-        alert("❌ Failed to send message. Please try again.");
-        console.error("EmailJS Error:", error);
-      });
-  });
-</script>
-
-
-
-
+<script src="main.js"></script>
 
 </body>
 </html>
