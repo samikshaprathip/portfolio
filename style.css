@@ -548,3 +548,91 @@ body {
     box-shadow: 0 0 15px #00eeff;
 }
 
+
+@media (max-width: 1024px) {
+  .home, .about, .contact {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .home-content, .about-text, .contact-text {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .home-img .glow-circle,
+  .about-img .glow-rectangle {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+  }
+
+  .services-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .home-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr; /* single column */
+  }
+
+  .portfolio-content {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .home-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .home-content h3 {
+    font-size: 1rem;
+  }
+
+  .btn-box {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .home-img .glow-circle,
+  .about-img .glow-rectangle {
+    width: 200px;
+    height: 200px;
+  }
+}
