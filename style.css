@@ -549,75 +549,95 @@ body {
 }
 
 
-/* === Extra Responsiveness Fixes === */
-
-/* For tablets & smaller */
 @media (max-width: 1024px) {
-  /* Center images when layout stacks */
+  .home, .about, .contact {
+    flex-direction: column;
+    align-items: center;      /* added → centers items when stacked */
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .home-content, .about-text, .contact-text {
+    max-width: 100%;
+    margin: 0 auto;           /* added → centers horizontally */
+  }
+
   .home-img .glow-circle,
   .about-img .glow-rectangle {
-    margin: 20px auto;
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;        /* keeps image centered */
   }
 
-  /* Remove awkward left offsets in about section */
-  .about-text h2,
-  .about-text h4,
-  .about-text p,
-  .about-text .btn-box {
-    margin-left: 0;
-    text-align: center;
+  .services-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    /* changed → grid is more flexible, fits nicely */
   }
 }
 
-/* For mobile phones */
 @media (max-width: 768px) {
-  /* Force all main flex sections into neat columns */
-  .home,
-  .about,
-  .contact {
+  .header {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  /* Ensure max width content centers nicely */
-  .home-content,
-  .about-text,
-  .contact-text {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  /* Better spacing between stacked sections */
-  .services-list,
-  .portfolio-content {
     gap: 15px;
   }
-}
 
-/* For very small screens */
-@media (max-width: 480px) {
-  /* Scale big text down */
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
   .home-content h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;         /* slightly smaller */
   }
 
   .home-content h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;         /* slightly smaller */
   }
 
-  .about-text h2 {
-    font-size: 1.5rem;
+  .services-list {
+    grid-template-columns: 1fr; /* single column */
   }
 
-  .about-text h4 {
-    font-size: 1.2rem;
+  .portfolio-content {
+    grid-template-columns: 1fr;
+    gap: 20px;                 /* added → spacing between cards */
   }
 
-  /* Reduce image sizes further */
+  .contact {
+    flex-direction: column;
+    align-items: center;       /* added */
+    text-align: center;
+  }
+
+  .contact-icons {
+    justify-content: center;
+    margin-top: 10px;          /* added → breathing room */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .home-content h1 {
+    font-size: 1.5rem;         /* slightly smaller for very small phones */
+  }
+
+  .home-content h3 {
+    font-size: 0.95rem;
+  }
+
+  .btn-box {
+    padding: 8px 18px;         /* slightly smaller */
+    font-size: 13px;
+  }
+
   .home-img .glow-circle,
   .about-img .glow-rectangle {
-    width: 200px;
-    height: 200px;
+    width: 180px;              /* slightly smaller */
+    height: 180px;
   }
 }
