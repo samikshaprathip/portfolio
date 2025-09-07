@@ -549,74 +549,55 @@ body {
 }
 
 
+/* === Extra Responsiveness Fixes === */
+
+/* For tablets & smaller */
 @media (max-width: 1024px) {
-  .home, .about, .contact {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 5%;
-  }
-
-  .home-content, .about-text, .contact-text {
-    max-width: 100%;
-    margin: 0;
-  }
-
+  /* Center images when layout stacks */
   .home-img .glow-circle,
   .about-img .glow-rectangle {
-    width: 250px;
-    height: 250px;
     margin: 20px auto;
   }
 
-  .services-list {
-    grid-template-columns: repeat(2, 1fr);
+  /* Remove awkward left offsets in about section */
+  .about-text h2,
+  .about-text h4,
+  .about-text p,
+  .about-text .btn-box {
+    margin-left: 0;
+    text-align: center;
   }
 }
 
+/* For mobile phones */
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .navbar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .home-content h1 {
-    font-size: 2rem;
-  }
-
-  .home-content h3 {
-    font-size: 1.2rem;
-  }
-
-  .services-list {
-    grid-template-columns: 1fr; /* single column */
-  }
-
-  .portfolio-content {
-    grid-template-columns: 1fr;
-  }
-
+  /* Force all main flex sections into neat columns */
+  .home,
+  .about,
   .contact {
     flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
-  .contact-icons {
-    justify-content: center;
+  /* Ensure max width content centers nicely */
+  .home-content,
+  .about-text,
+  .contact-text {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Better spacing between stacked sections */
+  .services-list,
+  .portfolio-content {
+    gap: 15px;
   }
 }
 
+/* For very small screens */
 @media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-
+  /* Scale big text down */
   .home-content h1 {
     font-size: 1.6rem;
   }
@@ -625,11 +606,15 @@ body {
     font-size: 1rem;
   }
 
-  .btn-box {
-    padding: 10px 20px;
-    font-size: 14px;
+  .about-text h2 {
+    font-size: 1.5rem;
   }
 
+  .about-text h4 {
+    font-size: 1.2rem;
+  }
+
+  /* Reduce image sizes further */
   .home-img .glow-circle,
   .about-img .glow-rectangle {
     width: 200px;
