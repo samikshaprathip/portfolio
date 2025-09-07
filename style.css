@@ -552,26 +552,24 @@ body {
 @media (max-width: 1024px) {
   .home, .about, .contact {
     flex-direction: column;
-    align-items: center;      /* added → centers items when stacked */
     text-align: center;
     padding: 40px 5%;
   }
 
   .home-content, .about-text, .contact-text {
     max-width: 100%;
-    margin: 0 auto;           /* added → centers horizontally */
+    margin: 0;
   }
 
   .home-img .glow-circle,
   .about-img .glow-rectangle {
     width: 250px;
     height: 250px;
-    margin: 20px auto;        /* keeps image centered */
+    margin: 20px auto;
   }
 
   .services-list {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    /* changed → grid is more flexible, fits nicely */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -589,11 +587,11 @@ body {
   }
 
   .home-content h1 {
-    font-size: 1.8rem;         /* slightly smaller */
+    font-size: 2rem;
   }
 
   .home-content h3 {
-    font-size: 1.1rem;         /* slightly smaller */
+    font-size: 1.2rem;
   }
 
   .services-list {
@@ -602,18 +600,15 @@ body {
 
   .portfolio-content {
     grid-template-columns: 1fr;
-    gap: 20px;                 /* added → spacing between cards */
   }
 
   .contact {
     flex-direction: column;
-    align-items: center;       /* added */
     text-align: center;
   }
 
   .contact-icons {
     justify-content: center;
-    margin-top: 10px;          /* added → breathing room */
   }
 }
 
@@ -623,21 +618,21 @@ body {
   }
 
   .home-content h1 {
-    font-size: 1.5rem;         /* slightly smaller for very small phones */
+    font-size: 1.6rem;
   }
 
   .home-content h3 {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .btn-box {
-    padding: 8px 18px;         /* slightly smaller */
-    font-size: 13px;
+    padding: 10px 20px;
+    font-size: 14px;
   }
 
   .home-img .glow-circle,
   .about-img .glow-rectangle {
-    width: 180px;              /* slightly smaller */
-    height: 180px;
+    width: 200px;
+    height: 200px;
   }
 }
